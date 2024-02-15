@@ -1,0 +1,38 @@
+/* l'importaton du ficher bootstrap */
+@import url(./../../css/bootstrap.css);
+
+.card img {
+  height: 8rem;
+  width: 8rem;
+  display: block;
+  margin: auto;
+}
+/* les configuration pour les liens d'options */
+
+/* le lien d'inscription */
+.card1:hover {
+  border-color: #0d6efd;
+  transition: all 0.6s;
+}
+
+/* le lien de recherche*/
+.card2:hover {
+  border-color: #0dcaf0;
+  transition: all 0.6s;
+}
+
+/* le lien de payement */
+.card3:hover {
+  border-color: #343a40;
+  transition: all 0.6s;
+}
+
+/* le lien de reussite*/
+.card4:hover {
+  border-color: #198754;
+  transition: all 0.6s;
+  -webkit-transition: all 0.6s;
+  -moz-transition: all 0.6s;
+  -ms-transition: all 0.6s;
+  -o-transition: all 0.6s;
+}

@@ -1,0 +1,58 @@
+/* le style pour les liens de de fonctionnalités */
+.card img {
+  height: auto;
+  width: 40%;
+  display: block;
+  margin: 4px auto;
+}
+a {
+  color: black;
+  text-decoration: none;
+}
+.card-body {
+  background-color: rgba(77, 32, 180, 0.651);
+}
+
+/* pour l'option eleve */
+.one {
+  background-color: rgba(0, 162, 255, 0.466);
+}
+.card1:hover {
+  border-width: 3px;
+  border-color: rgba(0, 162, 255, 0.466);
+  transition: all 0.6s;
+}
+
+/* pour l'option professeur */
+.two {
+  background-color: rgba(18, 128, 18, 0.582);
+}
+.card2:hover {
+  border-width: 3px;
+  border-color: rgba(18, 128, 18, 0.582);
+  transition: all 0.6s;
+}
+
+/* pour l'option Ecole */
+.three {
+  background-color: rgba(245, 15, 15, 0.267);
+}
+.card3:hover {
+  border-width: 3px;
+  border-color: rgba(245, 15, 15, 0.267);
+  transition: all 0.6s;
+}
+/* pour l'option paramètre */
+.four {
+  background-color: #b4cded9c;
+}
+.card4:hover {
+  border-width: 3px;
+  border-color: #b4cded9c;
+  transition: all 0.6s;
+}
+
+#main {
+  position: absolute;
+  left: 300px;
+}
