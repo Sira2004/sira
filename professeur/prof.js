@@ -42,7 +42,9 @@ function modify(id, url) {
       professeur_id: id,
     },
     success: function (reponse) {
+      $("#details").css("display", "block");
       $("#details").html(reponse);
+      $("#num").mask("00 00 00 00");
       $(".close").click(function () {
         $("#modal").hide(1000);
         $("#details").css("display", "none");
@@ -76,7 +78,29 @@ function ajax3(id) {
     processData: false,
     contentType: false,
     success: function (reponse) {
+      location.reload();
       see(id);
+    },
+  });
+}
+
+// la fonction pour valider le formulaire de recherche
+function searchProfs() {
+  formulaire = new FormData();
+  // la recuperation des valeurs des champs à modifier
+  formulaire.append("nom", $("#nom").val());
+  formulaire.append("prenom", $("#prenom").val());
+  formulaire.append("diplome", $("#diplome").val());
+  formulaire.append("specialite", $("#specialite").val());
+
+  $.post({
+    url: "./post_recherche_prof.php",
+    data: formulaire,
+    processData: false,
+    contentType: false,
+    success: function (reponse) {
+      console.log(reponse);
+      $("#listeProfs").html(reponse);
     },
   });
 }

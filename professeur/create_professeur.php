@@ -33,8 +33,8 @@
 
     <!-- l'envoi d'un message d'erreur en cas d'erreur dans le formulaire -->
     <?php if($error==0):?>
-    <div class="alert alert-warning alert-dismissible fade show position-absolute top-25 start-25" role="alert"
-        style="z-index:25">
+    <div class="alert alert-warning alert-dismissible fade show position-absolute top-25 start-25 " role="alert"
+        style="z-index:20">
         <strong><img src="./../icon/failure.png" style="width: 20px;"> Echec : </strong> Votre inscription a echoué
         veuillez verifier les données du formulaire
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
@@ -43,7 +43,7 @@
     <!-- l'envoi d'un message d'erreur lorsqu'on veut enregister deux élèves avec les mêmes infos-->
     <?php if($error==1):?>
     <div class="alert alert-warning alert-dismissible fade show position-absolute top-25 start-25" role="alert"
-        style="z-index:25">
+        style="z-index:20">
         <strong><img src="./../icon/failure.png" style="width: 20px;"> Echec:
         </strong>
         Un prof avec ses mêmes informations exist dejà dans la liste
@@ -58,7 +58,7 @@
     <!-- l'envoi d'un message de succès en cas de succès -->
     <?php if(isset($success)):?>
     <div class="toast fade show position-absolute top-25 start-25" role="alert" aria-live="assertive" aria-atomic="true"
-        style="z-index:25">
+        style="z-index:20">
         <div class="toast-header">
             <img src="./../param/image.php?path=<?php echo $photo?>&type=<?php echo $imageType?>" style=" width:
             50px; height:50px;" class="rounded-circle">
@@ -80,7 +80,7 @@
 
         <!-- linscription -->
         <section class="container ">
-            <div class="title  p-3 text-center h3 shadow y rounded-top rounded-circle"
+            <div class="title  p-3 text-center h3 shadow y rounded-bottom rounded-circle"
                 style="background-color:var(--dashbordColor);color:var(--textDashbordColor);">Création De Professeur
             </div>
             <form method="post" name="inscription" class="form border p-2" action="#" enctype="multipart/form-data"

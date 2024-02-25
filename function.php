@@ -53,7 +53,7 @@
       function isExisteClasse(array $list1,array $list2):bool 
       {
           foreach($list1 as $classe){
-              if($classe['classe']==$list2['classe'])
+              if(strtoupper($classe['classe'])==strtoupper($list2['classe']))
               {
                   return true;
                   break;

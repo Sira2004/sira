@@ -12,18 +12,29 @@
         background-color: var(--dashbordColor);
         color: var(--textDashbordColor) !important;
     }
+
+    table {
+        table-layout: fixed;
+    }
+
+
+    td,
+    th {
+        white-space: nowrap;
+        width: 130px;
+    }
     </style>
 </head>
 
 <body onload="load()">
     <?php include_once('./../header.php')?>
 
-    <main class=" p-3">
+    <main class="p-3" >
         <!-- le filtrage de la liste -->
-        <section class="my-4 m-auto container-fluid shadow shadow-sm p-1 d-flex justify-content-start">
-            <form class="row row-cols-2 row-cols-md-auto h6">
+        <section class="my-4 m-auto container-fluid shadow shadow-sm p-1 d-flex justify-content-start overflow-auto">
+            <form class="h6" style="white-space: nowrap;">
                 <!-- la case de filtrage pour la classe -->
-                <div class="col">
+                <div class="d-inline-block">
                     <label class="form-label " for="classe">Classe</label>
                     <select name="classe" id="classe" class="form-select" onchange="getTrimestres()">
                         <?php foreach ($listeClasses as $classe):?>
@@ -35,26 +46,32 @@
 
 
                 <!-- la case de filtrage pour le Trimestre-->
-                <div class="col">
+                <div class="d-inline-block">
                     <label class="form-label" for="trimestre">Trimestre</label>
                     <select class="form-select" name="trimestre" id="trimestre" onchange="getEleves()">
                         <option value="0">Seletionner une Classe</option>
                     </select>
                 </div>
-                <!-- la case de filtrage pour la classe-->
-                <div class="col">
+                <!-- la case de filtrage pour la matière-->
+                <div class="d-inline-block">
                     <label class="form-label" for="cour">Cours</label>
                     <select class="form-select" name="cour" id="cour" onchange="getEleves()">
                         <option value="">Seletionner une matiere</option>
                     </select>
                 </div>
 
+                <!-- la case de filtrage du nom-->
+                <div class="d-inline-block">
+                    <label class="form-label" for="nom">Nom</label>
+                    <input type="text" name="nom" id="nom" class="form-control">
+                </div>
+
             </form>
         </section>
 
         <!-- la liste des élèves -->
-        <section class="container  mt-2 m-auto">
-            <div class="p-1 w-100 m-auto" id="listeEleves">
+        <section class="container">
+            <div class="container overflow-auto" id="listeEleves">
 
             </div>
         </section>

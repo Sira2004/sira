@@ -64,7 +64,7 @@
     <section class="dshbord">
         <nav class="navbar fixed-top">
             <div class="container-fluid">
-                <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+                <div class="offcanvas offcanvas-start text-bg-dark " tabindex="-1" id="offcanvasDarkNavbar"
                     aria-labelledby="offcanvasDarkNavbarLabel">
                     <div class="offcanvas-header">
                         <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">

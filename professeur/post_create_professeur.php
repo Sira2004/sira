@@ -34,17 +34,17 @@
                     }
                     
                     // l'inclusion des donnée dans la base de donnée
-                    $mySchoolStatement=$mySchool->prepare("INSERT INTO professeur (prenom,nom,dat_naiss,lieu_naiss,sexe,diplome,specialite_id,numero,photo,imageType) VALUE (
-                      :prenom,:nom,:datNaiss,:lieuNaiss,:sexe,:diplome,:specialite,:numero,:photo,:imageType)");
+                    $mySchoolStatement=$mySchool->prepare("INSERT INTO professeur (prenom,nom,dat_naiss,lieu_naiss,diplome,specialite_id,numero,sexe,photo,imageType) VALUE (
+                      :prenom,:nom,:datNaiss,:lieuNaiss,:diplome,:specialite,:numero,:sexe,:photo,:imageType)");
                       $mySchoolStatement->execute(array(
                     'prenom'=> htmlspecialchars($prenom),
                     'nom'=> htmlspecialchars($nom),
                     'datNaiss'=> htmlspecialchars($datNaiss),
                     'lieuNaiss'=> htmlspecialchars($lieuNaiss),
-                    'sexe'=> htmlspecialchars($sexe),
                     'diplome'=> htmlspecialchars($diplome),
                     'specialite'=> htmlspecialchars($specialite),
                     'numero'=> htmlspecialchars($num),
+                    'sexe'=> htmlspecialchars($sexe),
                     'photo'=>$photo,
                     'imageType'=> $imageType
 

@@ -41,6 +41,7 @@ function getEleves() {
       classe_id: $("#classe").val(),
       trimestre_id: $("#trimestre").val(),
       cour_id: $("#cour").val(),
+      nom: $("#nom").val(),
     },
     success: function (reponse) {
       $("#listeEleves").html(reponse);

@@ -78,7 +78,8 @@
                             <!-- le champ de saisis pour le diplome-->
                             <div class="col-md-4 col-sm-auto">
                                 <label for="diplome" class="form-label">Diplôme</label>
-                                <input type="text" class="form-control" name="diplome" id="diplome">
+                                <input type="text" class="form-control" name="diplome" id="diplome"
+                                    value="<?php echo @$professeur['diplome']?>">
                             </div>
                             <!-- le champ pour les la specialité -->
                             <div class="col-md-4 col-sm-auto">
@@ -95,7 +96,7 @@
                             <div class="col-md-4 col-sm-auto">
                                 <label for="num" class="form-label">Numero de Telephone</label>
 
-                                <input type="number" class="form-control" id="num" name="num" required
+                                <input type="text" class="form-control" id="num" name="num" required
                                     value="<?php echo @$professeur['numero']?>" />
                             </div>
 

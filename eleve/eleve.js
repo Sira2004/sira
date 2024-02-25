@@ -81,10 +81,57 @@ function ajax3(id) {
     success: function (reponse) {
       $("#details").css("display", "block");
       $("#details").html("");
+      location.reload();
 
-      setTimeout(function () {
-        $("#change").css("display", "none");
-      }, "3000");
+      $("#change").css("display", "none");
+    },
+  });
+}
+
+// la fonction pour afficher les données à supprimer
+function deleteEleve(eleve_id, action) {
+  $.post({
+    url: "delete_eleve.php",
+    data: {
+      eleve_id: eleve_id,
+      action: action,
+    },
+    success: function (reponse) {
+      console.log(reponse);
+
+      $("#details").css("display", "block");
+      $("#details").html(reponse);
+
+      $(".close").click(function () {
+        $("#modal").hide(1000);
+        $("#details").css("display", "none");
+      });
+      if (action == "delete") location.reload();
+    },
+    error: function (error) {
+      console.log(error.status);
+    },
+  });
+}
+
+// la fonction pour valider le formulaire de recherche
+function searchEleves() {
+  formulaire = new FormData();
+  // la recuperation des valeurs des champs à chercher
+  formulaire.append("classe", $("#classe").val());
+  formulaire.append("sexe", $("#sexe").val());
+  formulaire.append("lieu_naiss", $("#lieu_naiss").val());
+  formulaire.append("nom", $("#nom").val());
+  formulaire.append("prenom", $("#prenom").val());
+
+  $.post({
+    url: "./post_recherche-eleve.php",
+    data: formulaire,
+    processData: false,
+    contentType: false,
+    success: function (reponse) {
+      console.log(reponse);
+      $("#listeEleves").html(reponse);
     },
   });
 }

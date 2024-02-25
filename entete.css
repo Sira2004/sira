@@ -59,7 +59,7 @@
 #entete {
   position: fixed;
   height: 60px;
-  width: 98vw;
+  width: 100vw;
   z-index: 20;
 }
 .navbar-brand {

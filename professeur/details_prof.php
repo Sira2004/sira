@@ -90,7 +90,7 @@
                             <label for="diplome" class="form-label">Diplome</label>
                             <input type="text" name="diplome" id="diplome"
                                 class="form-control border-0 bg-transparent border-bottom border-success border-2"
-                                value="<?php echo @$professeur['diplome']?>" disabled />
+                                value="<?php echo $professeur['diplome']?>" disabled />
                         </div>
                         <!-- le champ de saisis pour la specialité -->
                         <div class=" col-auto">
@@ -108,7 +108,7 @@
 
                             <input type="text"
                                 class="form-control border-0 bg-transparent border-bottom border-success border-2"
-                                id="num" name="num" disabled value="<?php echo @$professeur['numero']?>" />
+                                id="num" name="num" disabled value="<?php echo $professeur['numero']?>" />
                         </div>
                     </section>
 

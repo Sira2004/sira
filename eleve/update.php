@@ -89,7 +89,7 @@
                             <div class="col-md-4 col-sm-auto">
                                 <label for="num" class="form-label">Numero de Telephone</label>
 
-                                <input type="number" class="form-control" id="num" name="num" required
+                                <input type="text" class="form-control" id="num" name="num" required
                                     value="<?php echo @$eleve['numero']?>" />
                             </div>
 
@@ -145,7 +145,7 @@
                             <div class="col-md-4 col-sm-auto">
                                 <label for="numP" class="form-label">Numero de Telephone</label>
 
-                                <input type="number" class="form-control" id="numP" name="numP" required
+                                <input type="text" class="form-control" id="numP" name="numP" required
                                     value="<?php echo @$eleve['numeroP']?>" />
                             </div>
 
